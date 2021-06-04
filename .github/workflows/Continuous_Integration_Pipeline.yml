@@ -21,11 +21,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm install --save-dev svelte rollup-plugin-svelte
-      - run: npm test
-      - run: | 
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm install --save-dev svelte rollup-plugin-svelte
+    - run: npm test
+    - run: | 
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"

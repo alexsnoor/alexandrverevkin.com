@@ -61,9 +61,15 @@
 		"mccarter.start-git-bash",
 		"formulahendry.terminal",
 		"wingrunr21.vscode-ruby",
+<<<<<<< Updated upstream
 		"sissel.shopify-liquid",
 		"shd101wyy.markdown-preview-enhanced",
 		"yzhang.markdown-all-in-one"
+=======
+		"redhat.vscode-yaml",
+		"pivotal.vscode-manifest-yaml",
+		"leizongmin.node-module-intellisense"
+>>>>>>> Stashed changes
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],

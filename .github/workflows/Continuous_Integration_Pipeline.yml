@@ -2,9 +2,9 @@ name: Continuous Integration Pipeline
 
 on:
   push:
-    branches: [ master ]
+    branches: [ legal ]
   pull_request:
-    branches: [ master ]
+    branches: [ legal ]
 
 jobs:
   build:

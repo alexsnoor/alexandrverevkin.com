@@ -11,21 +11,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix: 
-        node-version: [10.x, 12.x, 14.x, 15.x]
-
     steps:
     - uses: actions/checkout@v2
-    - name: Build the site in the jekyll/builder container AND Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm install --save-dev svelte rollup-plugin-svelte
-    - run: npm test
-    - run: | 
+    - name: Build the site in the jekyll/builder container
+      run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"

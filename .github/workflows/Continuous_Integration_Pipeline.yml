@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  build: # Тут может быть любое название этой работы. НО лучше всего литературное!)
 
     runs-on: ubuntu-latest
 
@@ -16,16 +16,33 @@ jobs:
         node-version: [10.x, 12.x, 14.x, 15.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the site in the jekyll/builder container AND Use Node.js ${{ matrix.node-version }}
+    - 
+      uses: actions/checkout@v2
+    - 
+      name: Build the site in the jekyll/builder container AND Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm install --save-dev svelte rollup-plugin-svelte
-    - run: npm test
-    - run: | 
+    - 
+      run: npm run build --if-present
+    - 
+      run: | 
+
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+        
+  job_3:
+    name: Display results
+    needs: build # Имя работы нужногй в этой работе
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download math result for job 2
+        uses: actions/download-artifact@v2
+        with:
+          name: homework
+      - name: Print the final result
+        shell: bash
+        run: |
+          value=`cat math-homework.txt`
+          echo The result is $value

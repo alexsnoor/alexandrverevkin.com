@@ -54,7 +54,13 @@
 		"rebornix.ruby",
 		"mccarter.start-git-bash",
 		"wingrunr21.vscode-ruby",
-		"redhat.vscode-yaml"
+		"redhat.vscode-yaml",
+		"sissel.shopify-liquid",
+		"shd101wyy.markdown-preview-enhanced",
+		"yzhang.markdown-all-in-one",
+		"esbenp.prettier-vscode",
+		"graphql.vscode-graphql",
+		"mhutchie.git-graph"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],

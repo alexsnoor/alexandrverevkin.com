@@ -1,3 +1,5 @@
 {
-    "liveServer.settings.AdvanceCustomBrowserCmdLine": ""
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "editor.wordWrapColumn": 120,
+    "editor.wordWrap": "wordWrapColumn"
 }

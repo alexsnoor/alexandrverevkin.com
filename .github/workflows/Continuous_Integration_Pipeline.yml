@@ -31,18 +31,4 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
-        
-  job_3:
-    name: Display results
-    needs: build # Имя работы нужногй в этой работе
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download math result for job 2
-        uses: actions/download-artifact@v2
-        with:
-          name: homework
-      - name: Print the final result
-        shell: bash
-        run: |
-          value=`cat math-homework.txt`
-          echo The result is $value
+ 

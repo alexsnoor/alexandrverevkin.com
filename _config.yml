@@ -155,7 +155,6 @@ include:
   - .htaccess
   - _pages
 exclude:
-  - svelte-components
   - "*.sublime-project"
   - "*.sublime-workspace"
   - vendor

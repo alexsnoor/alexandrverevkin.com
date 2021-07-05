@@ -270,17 +270,3 @@ Pure Liquid Jekyll Table of Contents is distributed under the terms of the [MIT 
 Minimal Mistakes incorporates [Lunr](http://lunrjs.com),
 Copyright (c) 2018 Oliver Nightingale.
 Lunr is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
-#### Svelte Components 
- Это описание того как в систему устанавливать компоненты для работы Svelt
-```bash
-   dpkg --get-selections | grep node
-   sudo apt install libssl-dev   #Установка и подключение библиотеки libssl
-   wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-   nvm ls-remote                 #Установка менеджер версий NVM 
-   sudo apt install npm          #Команда установит ряд пакетов, включая инструменты, необходимые для компиляции и установки собственных надстроек из npm.
-   npm install -g degit          #умеет копировать шаблоны проектов из репозиториев GitHub и других подобных сервисов. Вы можете и не использовать готовый шаблон приложения, но он позволяет не делать первоначальную настройку проекта и экономит ваше время. Для того, чтобы degit заработал, на компьютере уже должен быть установлен Git (Позднее, вам скорее всего придется узнать как работать с , который большинство разработчиков используют для управления своими проектами).
-   cd my-svelte-project          #Перейдите в директорию, где вы хотите создать новый проект
-   
-
-```
